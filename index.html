@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convertidor de unidades de medida</title>
+    <!--LINKS-->
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/styles/convertidor.css">
+</head>
+<body>
+    <header>
+        <nav class="menu-bar">
+            <label for="check" class="checkbtn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <label class="logo">Alex22-SV</label>
+        </nav>
+    </header>
+    <div class="convertidor">
+        <h1 class="convertidor-title">Convertir unidades de longitud</h1>
+        <div class="convertidor-longitud">
+            <form class="form" id="form">
+                <label for="options-longitud-1">Convertir de:</label> 
+                <input type="number" id="option-number">
+                <select id="options-longitud-1" class="options">
+                    <option value="km">Kilómetro(s)</option>
+                    <option value="hm">Hectómetro(s)</option>
+                    <option value="dam">Decámetro(s)</option>
+                    <option value="m">Metro(s)</option>
+                    <option value="dm">Decímetro(s)</option>
+                    <option value="cm">Centímetro(s)</option>
+                    <option value="mm">Milímetro(s)</option>
+                </select>
+                <label for="options-longitud-2">a:</label>
+                <select id="options-longitud-2" class="options">
+                    <option value="km">Kilómetro(s)</option>
+                    <option value="hm">Hectómetro(s)</option>
+                    <option value="dam">Decámetro(s)</option>
+                    <option value="m">Metro(s)</option>
+                    <option value="dm">Decímetro(s)</option>
+                    <option value="cm">Centímetro(s)</option>
+                    <option value="mm">Milímetro(s)</option>
+                </select>
+                <button type="submit" class="btn">Convertir</button>
+            </form>
+            <h4 class="displayResult" id="displayResult">Resultado</h4>
+        </div>
+    </div>
+    <!--SCRIPTS-->
+    <script src="/scripts/convertidor.js"></script>
+</body>
+</html>
