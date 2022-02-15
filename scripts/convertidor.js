@@ -1,16 +1,33 @@
+// LONGITUD
 const optionslongitud1 = document.getElementById("options-longitud-1");
 const optionslongitud2 = document.getElementById("options-longitud-2");
-const optionnumber = document.getElementById("option-number");
-const form = document.getElementById('form');
-const displayResult = document.getElementById('displayResult');
+const formlongitud = document.getElementById('form-longitud');
+const optionnumberlongitud = document.getElementById("option-number-longitud");
+const displayResultlongitud = document.getElementById('displayResult-longitud');
+//MASA
+const optionsmasa1 = document.getElementById("options-masa-1");
+const optionsmasa2 = document.getElementById("options-masa-2");
+const formmasa = document.getElementById('form-masa');
+const optionnumbermasa = document.getElementById("option-number-masa");
+const displayResultmasa = document.getElementById('displayResult-masa');
 
-form.addEventListener('submit', e => {
+formlongitud.addEventListener('submit', e => {
     e.preventDefault()
     const option1 = optionslongitud1.value
     const option2 = optionslongitud2.value
-    const number = optionnumber.value
+    const number = optionnumberlongitud.value
     const result = convertirResultado(option1, number, option2)
-    displayResult.innerText = result
+    displayResultlongitud.innerText = result
+    return
+})
+formmasa.addEventListener('submit', e => {
+    e.preventDefault()
+    const option1 = optionsmasa1.value
+    const option2 = optionsmasa2.value
+    const number = optionnumbermasa.value
+    const result = convertirResultado(option1, number, option2)
+    displayResultmasa.innerText = result
+    return
 })
 
 function convertirResultado(option1, number, option2) {
@@ -180,5 +197,90 @@ function convertirResultado(option1, number, option2) {
             return `${number}mm`
         }
     }
-
+    /* Unidad de masa */
+    if(option1 == "t") {
+        if(option2 == "t") {
+            return `${number}t`
+        }
+        if(option2 == "kg") {
+            return `${number*1000}kg`
+        }
+        if(option2 == "g") {
+            return `${number*100000}g`
+        }
+        if(option2 == "mg") {
+            return `${number*1000000000}mg`
+        }
+        if(option2 == "µg") {
+            return `${number*1000000000000}µg`
+        }
+    }
+    if(option1 == "kg") {
+        if(option2 == "t") {
+            return `${number/1000}t`
+        }
+        if(option2 == "kg") {
+            return `${number}kg`
+        }
+        if(option2 == "g") {
+            return `${number*1000}g`
+        }
+        if(option2 == "mg") {
+            return `${number*1000000}mg`
+        }
+        if(option2 == "µg") {
+            return `${number*1000000000}µg`
+        }
+    }
+    if(option1 == "g") {
+        if(option2 == "t") {
+            return `${number/1000000}t`
+        }
+        if(option2 == "kg") {
+            return `${number/1000}kg`
+        }
+        if(option2 == "g") {
+            return `${number}g`
+        }
+        if(option2 == "mg") {
+            return `${number*1000}mg`
+        }
+        if(option2 == "µg") {
+            return `${number*1000000}µg`
+        }
+    }
+    if(option1 == "mg") {
+        if(option2 == "t") {
+            return `${number/1000000000}t`
+        }
+        if(option2 == "kg") {
+            return `${number/1000000}kg`
+        }
+        if(option2 == "g") {
+        return `${number/1000}g`
+        }
+        if(option2 == "mg") {
+            return `${number}mg`
+        }
+        if(option2 == "µg") {
+            return `${number*1000}µg`
+        }
+    }
+    if(option1 == "µg") {
+        if(option2 == "t") {
+            return `${number/1000000000000}t`
+        }
+        if(option2 == "kg") {
+            return `${number*1000000000}kg`
+        }
+        if(option2 == "g") {
+            return `${number*1000000}g`
+        }
+        if(option2 == "mg") {
+            return `${number/1000}mg`
+        }
+        if(option2 == "µg") {
+            return `${number}µg`
+        }
+    }
 }

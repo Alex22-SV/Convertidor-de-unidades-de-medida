@@ -22,9 +22,9 @@
     <div class="convertidor">
         <h1 class="convertidor-title">Convertir unidades de longitud</h1>
         <div class="convertidor-longitud">
-            <form class="form" id="form">
+            <form class="form" id="form-longitud">
                 <label for="options-longitud-1">Convertir de:</label> 
-                <input type="number" id="option-number">
+                <input type="number" id="option-number-longitud">
                 <select id="options-longitud-1" class="options">
                     <option value="km">Kilómetro(s)</option>
                     <option value="hm">Hectómetro(s)</option>
@@ -46,7 +46,31 @@
                 </select>
                 <button type="submit" class="btn">Convertir</button>
             </form>
-            <h4 class="displayResult" id="displayResult">Resultado</h4>
+            <h4 class="displayResult" id="displayResult-longitud">Resultado</h4>
+        </div>
+        <h1 class="convertidor-title">Convertir unidades de masa</h1>
+        <div class="convertidor-masa">
+            <form class="form" id="form-masa">
+                <label for="options-masa-1">Convertir de:</label> 
+                <input type="number" id="option-number-masa">
+                <select id="options-masa-1" class="options">
+                    <option value="t">Tonelada(s)</option>
+                    <option value="kg">Kilogramo(s)</option>
+                    <option value="g">Gramo(s)</option>
+                    <option value="mg">Miligramo(s)</option>
+                    <option value="µg">Microgramo(s)</option>
+                </select>
+                <label for="options-masa-2">a:</label>
+                <select id="options-masa-2" class="options">
+                    <option value="t">Tonelada(s)</option>
+                    <option value="kg">Kilogramo(s)</option>
+                    <option value="g">Gramo(s)</option>
+                    <option value="mg">Miligramo(s)</option>
+                    <option value="µg">Microgramo(s)</option>
+                </select>
+                <button type="submit" class="btn">Convertir</button>
+            </form>
+            <h4 class="displayResult" id="displayResult-masa">Resultado</h4>
         </div>
     </div>
     <!--SCRIPTS-->
