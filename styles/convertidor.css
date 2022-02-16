@@ -31,3 +31,19 @@
 .convertidor-masa .displayResult {
     display: block;
 }
+/* CONVERTIDOR DE TIEMPO */
+.convertidor-tiempo {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+}
+.convertidor .convertidor-title {
+    color: #005f1d;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    margin-left: 50px;
+}
+.convertidor-tiempo .displayResult {
+    display: block;
+}

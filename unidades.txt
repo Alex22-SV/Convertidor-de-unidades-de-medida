@@ -27,7 +27,6 @@ Unidades de medida de tiempo:
     - Milenio
     - Siglo
     - Década
-    - Lustro
     - Año 
     - Mes 
     - Semana 
