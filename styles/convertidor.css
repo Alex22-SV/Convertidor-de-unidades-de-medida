@@ -13,7 +13,7 @@
     justify-content: center;
 }
 .convertidor-longitud .displayResult {
-    display: block;
+    display: none;
 }
 /* CONVERTIDOR DE MASA */
 .convertidor-masa {
@@ -29,7 +29,7 @@
     margin-left: 50px;
 }
 .convertidor-masa .displayResult {
-    display: block;
+    display: none;
 }
 /* CONVERTIDOR DE TIEMPO */
 .convertidor-tiempo {
@@ -45,5 +45,5 @@
     margin-left: 50px;
 }
 .convertidor-tiempo .displayResult {
-    display: block;
+    display: none;
 }

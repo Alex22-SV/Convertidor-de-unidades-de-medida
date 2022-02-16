@@ -24,6 +24,7 @@ formlongitud.addEventListener('submit', e => {
     const number = optionnumberlongitud.value
     const result = convertirResultado(option1, number, option2)
     displayResultlongitud.innerText = result
+    displayResultlongitud.style.display = "block"
 })
 formmasa.addEventListener('submit', e => {
     e.preventDefault()
@@ -32,6 +33,7 @@ formmasa.addEventListener('submit', e => {
     const number = optionnumbermasa.value
     const result = convertirResultado(option1, number, option2)
     displayResultmasa.innerText = result
+    displayResultmasa.style.display = "block"
 })
 formtiempo.addEventListener('submit', e => {
     e.preventDefault()
@@ -40,7 +42,9 @@ formtiempo.addEventListener('submit', e => {
     const number = optionnumbertiempo.value
     const result = convertirResultado(option1, number, option2)
     displayResulttiempo.innerText = result
+    displayResulttiempo.style.display = "block"
 })
+
 
 function convertirResultado(option1, number, option2) {
     /* Número inválido */
