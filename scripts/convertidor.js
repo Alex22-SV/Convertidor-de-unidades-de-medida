@@ -16,6 +16,12 @@ const optionstiempo2 = document.getElementById("options-tiempo-2");
 const formtiempo = document.getElementById('form-tiempo');
 const optionnumbertiempo = document.getElementById("option-number-tiempo");
 const displayResulttiempo = document.getElementById('displayResult-tiempo');
+//TEMPERATURA
+const optionstemperatura1 = document.getElementById("options-temperatura-1");
+const optionstemperatura2 = document.getElementById("options-temperatura-2");
+const formtemperatura = document.getElementById('form-temperatura');
+const optionnumbertemperatura = document.getElementById("option-number-temperatura");
+const displayResulttemperatura = document.getElementById('displayResult-temperatura');
 
 formlongitud.addEventListener('submit', e => {
     e.preventDefault()
@@ -43,6 +49,15 @@ formtiempo.addEventListener('submit', e => {
     const result = convertirResultado(option1, number, option2)
     displayResulttiempo.innerText = result
     displayResulttiempo.style.display = "block"
+})
+formtemperatura.addEventListener('submit', e => {
+    e.preventDefault()
+    const option1 = optionstemperatura1.value
+    const option2 = optionstemperatura2.value
+    const number = optionnumbertemperatura.value
+    const result = convertirResultado(option1, number, option2)
+    displayResulttemperatura.innerText = result
+    displayResulttemperatura.style.display = "block"
 })
 
 
@@ -620,4 +635,41 @@ function convertirResultado(option1, number, option2) {
             return `${number}s`
         }
     }   
+    /* Unidades de temperatura */
+    if(option1 == "K") {
+        if(option2 == "K") {
+            return `${number} K`
+        }
+        if(option2 == "°C") {
+            return `${number-273.15} °C`
+        }
+        if(option2 == "°F") {
+            return `${(number-273.15)*(9/5)+(32)} °F`
+        }
+    }
+    if(option1 == "°C") {
+        if(option2 == "K") {
+            const number = int(number)
+            return `${number+273.15} K`
+        }
+        if(option2 == "°C") {
+            return `${number} °C`
+        }
+        if(option2 == "°F") {
+            return `${(number)*(9/5)+32} °F`
+        }
+    }
+    if(option1 == "°F") {
+        if(option2 == "K") {
+            // let answer = (number-32)*(5/9)+(273.15)
+            // return `${answer.toFixed(3)} K`
+            return `${(number-32)*(5/9)+(273.15)} K`
+        }
+        if(option2 == "°C") {
+            return `${(number-32)*(5/9)} °C`
+        }
+        if(option2 == "°F") {
+            return `${number} °F`
+        }
+    }
 }

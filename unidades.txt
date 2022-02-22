@@ -36,7 +36,9 @@ Unidades de medida de tiempo:
     - Segundo (s)
 
 Unidades de medida de intensidad de corriente eléctrica
+--
 
-
-1km - 10hm
-2km - X 
+Unidades de medida de temperatura
+    - Kelvin (K)
+    - Celsius (°C)
+    - Fahrenheit (°F)
